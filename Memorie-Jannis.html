@@ -6,10 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Memorie Spiel</title>
 </head>
+<link rel="stylesheet" href="style.css"> 
+
 <body>
     <h1>Jannis` Memory Game</h1>
-    <div id = "Spielfeld"></div>
+
     <button onclick="shuffleCards()">Start</button>
+    <button onclick="resetCards()">Reset</button>
+
+    <div class = "grid-container" id = "Spielfeld">
+        <div onclick="test()" class="grid-item"> 1 </div>
+        <div onclick="test()" class="grid-item"> 2 </div>
+        <div onclick="test()" class="grid-item"> 3 </div>
+        <div onclick="test()" class="grid-item"> 4 </div>
+        <div onclick="test()" class="grid-item"> 5 </div>
+        <div onclick="test()" class="grid-item"> 6 </div>
+        <div onclick="test()" class="grid-item"> 7 </div>
+        <div onclick="test()" class="grid-item"> 8 </div>
+        <div onclick="test()" class="grid-item"> 8 </div>
+        <div onclick="test()" class="grid-item"> 10</div>
+        <div onclick="test()" class="grid-item"> 11</div>
+        <div onclick="test()" class="grid-item"> 12</div>
+        <div onclick="test()" class="grid-item"> 13</div>
+        <div onclick="test()" class="grid-item"> 14</div>
+        <div onclick="test()" class="grid-item"> 15</div>
+        <div onclick="test()" class="grid-item"> 16</div>
+    </div>
+   
 <script>
     const cards =["B1","B2","B3","B4","B5","B6","B7","B8","B9","B10","B11","B12","B13","B14","B15","B16",]    //Array zur späteren zuordnung der Spielkartenmotive
     
@@ -19,6 +42,14 @@
             console.log(cards[x])
         }
     }
+function test(){
+    console.log("foo")
+}
+    function checkMatch(){
+        
+
+
+    };
 </script>
 </body>
 </html>
