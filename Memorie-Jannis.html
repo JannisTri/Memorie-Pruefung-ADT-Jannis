@@ -10,46 +10,28 @@
 
 <body>
     <h1>Jannis` Memory Game</h1>
-
+<img src="SpaceCat Memory set 8pcs/SpaceCat_Cover.png" alt="WHyyyyy dont u work?">
     <button onclick="shuffleCards()">Start</button>
     <button onclick="resetCards()">Reset</button>
-
     <div class = "grid-container" id = "Spielfeld">
-        <div onclick="test()" class="grid-item"> 1 </div>
-        <div onclick="test()" class="grid-item"> 2 </div>
-        <div onclick="test()" class="grid-item"> 3 </div>
-        <div onclick="test()" class="grid-item"> 4 </div>
-        <div onclick="test()" class="grid-item"> 5 </div>
-        <div onclick="test()" class="grid-item"> 6 </div>
-        <div onclick="test()" class="grid-item"> 7 </div>
-        <div onclick="test()" class="grid-item"> 8 </div>
-        <div onclick="test()" class="grid-item"> 8 </div>
-        <div onclick="test()" class="grid-item"> 10</div>
-        <div onclick="test()" class="grid-item"> 11</div>
-        <div onclick="test()" class="grid-item"> 12</div>
-        <div onclick="test()" class="grid-item"> 13</div>
-        <div onclick="test()" class="grid-item"> 14</div>
-        <div onclick="test()" class="grid-item"> 15</div>
-        <div onclick="test()" class="grid-item"> 16</div>
+        <div id = "F1" onclick="checkMatch()" class="grid-item"> 1 </div>
+        <div id = "F2" onclick="checkMatch()" class="grid-item"> 2 </div>
+        <div id = "F3" onclick="checkMatch()" class="grid-item"> 3 </div>
+        <div id = "F4" onclick="checkMatch()" class="grid-item"> 4 </div>
+        <div id = "F5" onclick="checkMatch()" class="grid-item"> 5 </div>
+        <div id = "F6" onclick="checkMatch()" class="grid-item"> 6 </div>
+        <div id = "F7" onclick="checkMatch()" class="grid-item"> 7 </div>
+        <div id = "F8" onclick="checkMatch()" class="grid-item"> 8 </div>
+        <div id = "F9" onclick="checkMatch()" class="grid-item"> 8 </div>
+        <div id = "F10" onclick="checkMatch()" class="grid-item"> 10</div>
+        <div id = "F11" onclick="checkMatch()" class="grid-item"> 11</div>
+        <div id = "F12" onclick="checkMatch()" class="grid-item"> 12</div>
+        <div id = "F13" onclick="checkMatch()" class="grid-item"> 13</div>
+        <div id = "F14" onclick="checkMatch()" class="grid-item"> 14</div>
+        <div id = "F15" onclick="checkMatch()" class="grid-item"> 15</div>
+        <div id = "F16" onclick="checkMatch()" class="grid-item"> 16</div>
     </div>
    
-<script>
-    const cards =["B1","B2","B3","B4","B5","B6","B7","B8","B9","B10","B11","B12","B13","B14","B15","B16",]    //Array zur späteren zuordnung der Spielkartenmotive
-    
-    function shuffleCards(){                             //Gibt Jeder Karte (B1-B16) einen anderen zufälligen Wert zwischen 1-16 dieses ist die Posootion auf dem Spielfeld
-        for (i=0; i<17; i++ ){
-            let x = Math.floor((Math.random() * 16) + 1)
-            console.log(cards[x])
-        }
-    }
-function test(){
-    console.log("foo")
-}
-    function checkMatch(){
-        
-
-
-    };
-</script>
+<script src="script.js"> </script>
 </body>
 </html>
