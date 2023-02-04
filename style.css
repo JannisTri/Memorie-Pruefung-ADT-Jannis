@@ -1,20 +1,24 @@
 h1 {
-    font-size: 2.5em;
-    
+    font-size: 2.5em; 
+    color: rgb(255, 255, 255);
  }
+body{
+ background-color: #556df7a0;
+}
   button {
     font-size: 24px;
     padding: 14px 40px;
     border-radius: 12px;
-    background-color: rgba(137, 218, 240, 0.518);
-    color: rgb(60, 60, 60);
+    background-color: rgba(11, 111, 192);
+    color: rgb(255, 255, 255);
     margin-left: 30px;
+    margin-bottom: 20px;
  }
 
  .grid-container {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    background-color: #032e51;
+    background-color: rgb(11, 111, 192);
     padding: 10px;
   }
   .grid-item {
