@@ -1,5 +1,8 @@
 const cards =["/GitHub/Memorie-Pruefung-ADT-Jannis/SpaceCat_1.png","/GitHub/Memorie-Pruefung-ADT-Jannis/SpaceCat_1.png","/GitHub/Memorie-Pruefung-ADT-Jannis/SpaceCat_2.png","/GitHub/Memorie-Pruefung-ADT-Jannis/SpaceCat_2.png","/GitHub/Memorie-Pruefung-ADT-Jannis/SpaceCat_3.png","/GitHub/Memorie-Pruefung-ADT-Jannis/SpaceCat_3.png","/GitHub/Memorie-Pruefung-ADT-Jannis/SpaceCat_4.png","/GitHub/Memorie-Pruefung-ADT-Jannis/SpaceCat_4.png","/GitHub/Memorie-Pruefung-ADT-Jannis/SpaceCat_5.png","/GitHub/Memorie-Pruefung-ADT-Jannis/SpaceCat_5.png","/GitHub/Memorie-Pruefung-ADT-Jannis/SpaceCat_6.png","/GitHub/Memorie-Pruefung-ADT-Jannis/SpaceCat_6.png","/GitHub/Memorie-Pruefung-ADT-Jannis/SpaceCat_7.png","/GitHub/Memorie-Pruefung-ADT-Jannis/SpaceCat_7.png","/GitHub/Memorie-Pruefung-ADT-Jannis/SpaceCat_8.png","/GitHub/Memorie-Pruefung-ADT-Jannis/SpaceCat_8.png",];
 const container = document.getElementById("Spielfeld");
+let Highscore = document.getElementById("Highscore");
+let MatchCounter = 0;
+let BetrX = 1;
 let x; 
 let Card1;
 let Card2;
@@ -44,10 +47,29 @@ function flipCard(event){
 function checkMatch(){
     if (Card1.src===Card2.src) {
         console.log("Yaay")
-        // hier higscore hochzählen lassen
-    } else if (Card2 !== undefined){
+        setHighscoreUp();
+    } else if (Card2 !== undefined ){
         console.log("Noooo")
         Card1.src="/GitHub/Memorie-Pruefung-ADT-Jannis/SpaceCat_Cover.png"
         Card2.src="/GitHub/Memorie-Pruefung-ADT-Jannis/SpaceCat_Cover.png"
+        setHighscoreDown();
+    }
+}
+function setHighscoreUp(){
+    Highscore.innerText = parseInt(Highscore.innerText) + BetrX;
+    MatchCounter++;
+    checkWin();
+}
+function setHighscoreDown(){
+    if (MatchCounter > 0){
+    Highscore.innerText = parseInt(Highscore.innerText) - (BetrX*0.5);}
+    if (Highscore.innerText < 0){
+        Highscore.innerText = "0"    }
+
+}
+function checkWin(){
+    if(MatchCounter == 8){
+
+        // innerText = "Herzlichen Glückwunsch, du hast das Spiel erfolgreich beendet. Dein Highscore ist:" + Highscore.innerText
     }
 }
