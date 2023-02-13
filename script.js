@@ -11,13 +11,13 @@ let counter = 0;
 let index;
 let CardMotivs;
 resetCards();
-//Sorgt dafür das die zufallszahl nur genau einmal vorkommt und das nach reset nicht die Karten an der selben Position bleiben    
+    
 function resetCards(){   
     let newCards = [...cards]; 
-    let y= 0;
     CardMotivs = [];
     Highscore.innerText = "0";
     MatchCounter = 0;
+    let y= 0;
     WinNot.innerText = " ";
     for (i=0; i<16; i++ ){
         x = Math.floor((Math.random() * newCards.length));
@@ -30,7 +30,6 @@ function resetCards(){
         motive.src = "/GitHub/Memorie-Pruefung-ADT-Jannis/SpaceCat_Cover.png";
     }        
 }
-// eventListener und Funktion sorgen dafür,dass die richtige Vorderseite der Karte angezeigt wird, wenn man auf das Cover Motiv drückt und ruft checkmatch auaf wenn die 2. Karte angeklickt wurde
 container.addEventListener("click", flipCard);
 function flipCard(event){
    counter++;
@@ -45,13 +44,10 @@ function flipCard(event){
         setTimeout (checkMatch, 3000);
    }
 }
-// überprüft die Werte und versteckt die karten wieder wenn sie nicht gleich sind
 function checkMatch(){
     if (Card1.src===Card2.src) {
-        console.log("Yaay");
         setHighscoreUp();
     } else if (Card2 !== undefined ){
-        console.log("Noooo");
         Card1.src="/GitHub/Memorie-Pruefung-ADT-Jannis/SpaceCat_Cover.png";
         Card2.src="/GitHub/Memorie-Pruefung-ADT-Jannis/SpaceCat_Cover.png";
         setHighscoreDown();
@@ -70,7 +66,6 @@ function setHighscoreDown(){
 }
 function checkWin(){
     if(MatchCounter == 8){
-        console.log("Win")
-        WinNot.innerText = "Herzlichen Glückwunsch, du hast das Spiel erfolgreich beendet. Dein Highscore ist: " + Highscore.innerText
+        WinNot.innerText = "Herzlichen Glückwunsch, du hast das Spiel erfolgreich beendet. Dein Highscore ist: " + Highscore.innerText;
     }
 }
